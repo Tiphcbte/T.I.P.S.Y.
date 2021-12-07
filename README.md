@@ -8,3 +8,4 @@
 - To commit (with a commit message): git commit -m "commit message"
 - To actually upload committed file to git: git push
 - To retrieve files from the repository: git pull
+- To change the branch you are working on: git checkout {name of the branch}
