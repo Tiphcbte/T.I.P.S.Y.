@@ -1,4 +1,5 @@
-works but very long arm --> cube will be knocked over before it can be recognized
+%% works but very long arm --> cube will be knocked over before it can be recognized %%
+
 rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory "header:
   seq: 0
   stamp:
@@ -13,7 +14,9 @@ points:
   effort: [0,0,0,0,0,0,0]
   time_from_start: {secs: 3, nsecs: 0}"
 
-shorter arm but too low for table --> torso has to grow
+-------------------
+%% shorter arm but too low for table --> torso has to grow %%
+
 rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory "header:
   seq: 0
   stamp:
