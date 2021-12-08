@@ -12,3 +12,18 @@ table 1 (id 1): (-1.4 -2.2 0.83)
 table 2 (id 0): (-1.4 -1.1 0.83)
 table 3 (id 2): (-1.4 1.1 0.83)
 table 4 (id 3): (-1.4 2.2 0.83)
+
+To make robot see cube:
+rostopic pub /head_controller/command trajectory_msgJointTrajectory "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+joint_names: ['head_1_joint', 'head_2_joint']
+points:
+- positions: [0,-0.5]
+  velocities: [0,0]
+  accelerations: [0,0]
+  effort: [0,0]
+  time_from_start: {secs: 3, nsecs: 0}" -r 3
