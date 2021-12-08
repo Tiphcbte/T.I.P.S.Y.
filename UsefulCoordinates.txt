@@ -1,11 +1,11 @@
 Put robot in world in front of table 1:
 roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -1.0 -y -2.2 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
 table 2:
-roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -1.0 -y -1.0 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
+roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -1.0 -y -1.1 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
 table 3:
-roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -1.0 -y 1.0 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
+roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -1.0 -y 1.1 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
 table 4:
-roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -1.0 -y 2.1 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
+roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -1.0 -y 2.2 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
 
 Positions aruco_cubes:
 table 1 (id 1): (-1.4 -2.2 0.83)
