@@ -1,4 +1,5 @@
 %% works but very long arm --> cube will be knocked over before it can be recognized %%
+try to make it shorter but because of angle limits - didn't find the right angles yet.
 
 rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory "header:
   seq: 0
@@ -13,9 +14,9 @@ points:
   accelerations: [0,0,0,0,0,0,0]
   effort: [0,0,0,0,0,0,0]
   time_from_start: {secs: 3, nsecs: 0}"
-
--------------------
-%% shorter arm but too low for table --> torso has to grow still too low
+ 
+  
+ 
 rostopic pub /torso_controller/command trajectory_msgs/JointTrajectory "header:
   seq: 0
   stamp:
@@ -24,12 +25,14 @@ rostopic pub /torso_controller/command trajectory_msgs/JointTrajectory "header:
   frame_id: ''
 joint_names: ['torso_lift_joint']
 points:
-- positions: [0.3]
+- positions: [0.5]
   velocities: [0]
   accelerations: [0]
   effort: [0]
   time_from_start: {secs: 2, nsecs: 0}"
-
+  
+  
+%% make arm bend upwards but blocks robot's own view
 rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory "header:
   seq: 0
   stamp:
@@ -44,4 +47,6 @@ points:
   effort: [0,0,0,0,0,0,0]
   time_from_start: {secs: 3, nsecs: 0}"
   
-  ----
+  ---------
+  %% trying to find arm position to grab sideways
+
