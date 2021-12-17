@@ -1,10 +1,24 @@
-
+The following commands make the robot appear in front of the table and grasp the cube that is on the table
+-----------------------------------------------------------------------------------------------------------
 roscd tiago_gazebo/models
 grep -RiIl 'sdf' | xargs sed -i 's/package/model/g'
 
-roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -0.65 -y -2.05 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
-FROM X=0.65 TIAGO CAN STILL DETECT THE MARKERS BUT THERE IS JUST NOT ENOUGH SPACE TO MOVE HIS ARM IN THE RIGHT POSITION
+roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -0.68 -y -2.17 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
 rosrun rviz rviz
+
+rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+joint_names: ['arm_1_joint', 'arm_2_joint','arm_3_joint','arm_4_joint','arm_5_joint','arm_6_joint','arm_7_joint']
+points:
+- positions: [0, 1.1, 0,0,0,0,0]
+  velocities: [0,0,0,0,0,0,0]
+  accelerations: [0,0,0,0,0,0,0]
+  effort: [0,0,0,0,0,0,0]
+  time_from_start: {secs: 3, nsecs: 0}" 
 
 rostopic pub /torso_controller/command trajectory_msgs/JointTrajectory "header:
   seq: 0
@@ -14,7 +28,7 @@ rostopic pub /torso_controller/command trajectory_msgs/JointTrajectory "header:
   frame_id: ''
 joint_names: ['torso_lift_joint']
 points:
-- positions: [0.23]
+- positions: [0.35]
   velocities: [0]
   accelerations: [0]
   effort: [0]
@@ -28,7 +42,7 @@ rostopic pub /head_controller/command trajectory_msgs/JointTrajectory "header:
   frame_id: ''
 joint_names: ['head_1_joint','head_2_joint']
 points:
-- positions: [0,-0.4]
+- positions: [0,-0.45]
   velocities: [0,0]
   accelerations: [0,0]
   effort: [0,0]
@@ -48,5 +62,30 @@ points:
   effort: [0,0,0,0,0,0,0]
   time_from_start: {secs: 3, nsecs: 0}" 
   
-  
+  rostopic pub /torso_controller/command trajectory_msgs/JointTrajectory "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+joint_names: ['torso_lift_joint']
+points:
+- positions: [0.2]
+  velocities: [0]
+  accelerations: [0]
+  effort: [0]
+  time_from_start: {secs: 2, nsecs: 0}"
  
+rostopic pub /gripper_controller/command trajectory_msgs/JointTrajectory "header:
+  seq: 0
+  stamp:
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+joint_names: ['gripper_left_finger_joint','gripper_right_finger_joint']
+points:
+- positions: [0,0]
+  velocities: [0,0]
+  accelerations: [0,0]
+  effort: [0,0]
+  time_from_start: {secs: 2, nsecs: 0}"
