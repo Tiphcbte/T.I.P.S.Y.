@@ -13,6 +13,26 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#OnTable -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#OnTable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -21,9 +41,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#DrinkId -->
+    <!-- http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#Coordinates -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#DrinkId">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#Coordinates">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -101,8 +121,8 @@
     <owl:Class rdf:about="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#Drink">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#DrinkId"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#OnTable"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#Table"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -210,6 +230,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#Sweet">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#Cocktail"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#Table -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/montie/ontologies/2021/11/untitled-ontology-17#Table"/>
     
 
 
