@@ -1,10 +1,18 @@
-The following commands make the robot appear in front of the table and grasp the cube that is on the table
------------------------------------------------------------------------------------------------------------
-roscd tiago_gazebo/models
-grep -RiIl 'sdf' | xargs sed -i 's/package/model/g'
+When Tiago is in front of the table, he can detect the position of the aruco cube using the following commands:
+roslaunch tiago_aruco_demo tiago_multiple_detector.launch markerSize:=0.045
+rostopic echo /aruco_marker_publisher/markers
 
-roslaunch tiago_gazebo tiago_gazebo.launch public_sim:=true robot:=steel world:=project gzpose:="-x -0.68 -y -2.17 -z 0.0 -R 0.0 -P 0.0 -Y 3.14"
-rosrun rviz rviz
+The output position x_cube and y_cube of the aruco cube are important (these are relative positions from tiago)
+These should be equal to x* and y* such that the trajectory of the arm can perfectly grab the cube
+x* = 0.7456
+y* = 0.0473
+
+To do this we should move tiago to
+x_tiago_new = x_tiago_old + x* - x_cube
+y_tiago_new = y_tiago_old + y* - y_cube
+(for now, we can just let tiago move already to the perfect position in front of the table but later if there are more drinks per table, this could become useful)
+
+Now we can use the following commands to grab the cube (terminal commands - should be converted to code) TODO
 
 rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory "header:
   seq: 0
