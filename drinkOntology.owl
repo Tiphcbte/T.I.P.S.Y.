@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology"
+     xml:base="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:drinksOntology="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#onTable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#onTable"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Alcohol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Alcohol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Drinks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Beer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Beer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Alcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Cocktail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Cocktail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Alcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Coke -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Coke">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#NoAlcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Drinks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Drinks"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Lemonade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Lemonade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#NoAlcohol"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#NoAlcohol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#NoAlcohol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Drinks"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#cola -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#cola">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Coke"/>
+        <drinksOntology:onTable rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</drinksOntology:onTable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#fresh_lemonade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#fresh_lemonade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Lemonade"/>
+        <drinksOntology:onTable rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</drinksOntology:onTable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#gintonic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#gintonic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Cocktail"/>
+        <drinksOntology:onTable rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</drinksOntology:onTable>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#white_beer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#white_beer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sv/ontologies/2021/10/drinksOntology#Beer"/>
+        <drinksOntology:onTable rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</drinksOntology:onTable>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
