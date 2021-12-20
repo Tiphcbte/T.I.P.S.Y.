@@ -13,6 +13,8 @@ y_tiago_new = y_tiago_old + y* - y_cube
 (for now, we can just let tiago move already to the perfect position in front of the table but later if there are more drinks per table, this could become useful)
 
 Now we can use the following commands to grab the cube (terminal commands - should be converted to code) TODO
+help: 
+  http://wiki.ros.org/Robots/TIAGo/Tutorials/trajectory_controller
 
 rostopic pub /arm_controller/command trajectory_msgs/JointTrajectory "header:
   seq: 0
